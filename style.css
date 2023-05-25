@@ -1,0 +1,624 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Sanchez&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Sanchez', serif;
+}
+:root {  
+    --purple: rgb(123, 31, 162);
+    --violet: rgb(103, 58, 183);
+    --pink: rgb(244, 143, 177);
+  }
+
+body{
+    height: 100vh;
+}
+
+.upper{
+    width: 100%;
+    height: 100vh;
+    min-height: 500px;
+    position: relative;
+    
+}
+
+.navbar{
+    width: 100%;
+    height: 6rem;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    border-bottom: black solid 1px;
+}
+.icon{
+    
+    width: 10px;
+    height: 10px;
+    transition: all ease-in-out 0.5s;
+}
+.home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logo{
+    width: 8rem;
+    height: 4rem;
+   
+    background-image: url(images/lgo.jpg);
+    background-position: center;
+    background-size: cover;
+    margin-top: 10px;
+}
+
+
+.text{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    height: 7rem;
+}
+
+
+@keyframes background-pan{
+    from{
+        background-position: 0% center;
+    }
+    to{
+        background-position: -200% center;
+    }
+}
+
+
+
+h1{
+    font-size: 3.5em;
+    font-weight: lighter;
+}
+
+
+@keyframes scale {
+    from, to {
+      transform: scale(0);
+    }
+    
+    50% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    
+    to {
+      transform: rotate(180deg);
+    }
+  }
+
+
+
+h1 > .magic {
+    display: inline-block;
+    position: relative;
+  }
+  
+  h1 > .magic > .magic-star {
+    --size: clamp(20px, 1.5vw, 30px);
+    
+    animation: scale 700ms ease forwards;
+    display: block;
+    height: var(--size);
+    left: var(--star-left);
+    position: absolute;
+    top: var(--star-top);
+    width: var(--size);
+  }
+  
+  h1 > .magic > .magic-star > svg {
+    animation: rotate 1000ms linear infinite;
+    display: block;
+    opacity: 0.7;
+  }
+  
+  h1 > .magic > .magic-star > svg > path {
+    fill: var(--violet);
+  }
+  
+  h1 > .magic > .magic-text {
+    animation: background-pan 3s linear infinite;
+    background: linear-gradient(
+      to right,
+      var(--purple),
+      var(--violet),
+      var(--pink),
+      var(--purple)
+    );
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+  }
+  
+
+
+  h2 > .magice {
+    display: inline-block;
+    position: relative;
+  }
+  
+  h2 > .magice > .magic-stare {
+    --size: clamp(20px, 1.5vw, 30px);
+    
+    animation: scale 700ms ease forwards;
+    display: block;
+    height: var(--size);
+    left: var(--star-left);
+    position: absolute;
+    top: var(--star-top);
+    width: var(--size);
+  }
+  
+  h2 > .magice > .magic-stare > svg {
+    animation: rotate 1000ms linear infinite;
+    display: block;
+    opacity: 0.7;
+  }
+  
+  h2 > .magice > .magic-stare > svg > path {
+    fill: var(--violet);
+  }
+  h2 > .magice > .textile {
+    animation: background-pan 3s linear infinite;
+    background: linear-gradient(
+      to right,
+      var(--purple),
+      var(--violet),
+      var(--pink),
+      var(--purple)
+    );
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+  }
+  
+
+    
+
+
+
+
+.tee{
+    height: calc(100vh - 13rem);
+    
+    background-size: cover;
+    background-position:center;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    overflow: hidden;
+}
+.tee div{
+    transition: all ease-in-out 1s;
+}
+
+.tee1{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url(images/teeall5.jpg); 
+    background-size: cover;
+    background-position:center;
+}
+.tee2{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: blueviolet;
+}
+.tee3{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: red;
+}
+.tee4{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: yellow;
+}
+
+
+
+
+.icon2, .icon1{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    z-index: 5;
+}
+.icon1{
+   bottom: 7rem;
+   left: 4rem;
+    transform: rotate(90deg);
+   
+}
+.icon2{
+    bottom: 7rem;
+    right: 4rem;
+    transform: rotate(-90deg);
+
+}
+
+
+
+.page{
+    scroll-snap-align: start;
+    
+}
+.container{
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+
+.design{
+    width: 100%;
+    height: 100vh;
+    /* background-color: #1B1A1A; */
+    padding:4rem;
+    background: #000000;  /* fallback for old browsers */  
+    background: -webkit-linear-gradient(to left, #434343, #000000);  
+    background: linear-gradient(to left, #434343, #000000); 
+    display: flex;
+}
+
+.designtext{
+    height: 100%;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h2{
+    color: white;
+    font-size: 5rem;
+    font-weight: lighter;
+    padding-left: 3rem;
+}
+  /* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.container::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+
+	background-color: #f5f5f502;
+}
+
+.container::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+.container::-webkit-scrollbar-thumb
+{
+	
+	background-color: #494949;
+}
+
+
+
+.cards{
+    animation:mover 1s infinite  alternate;
+    height: 100%;
+    width: 60%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+.card{
+    
+    position: absolute;
+    width: 15rem;
+    height: 22rem;
+   background-color: cadetblue;
+   
+    
+}
+
+.card1{
+    background-image: url(images/design1.png);
+    background-size: cover;
+    background-position: center;
+    
+    /* transform: rotateZ(20deg) translate(120px, -30px); */
+}
+
+.card2{
+    background-image: url(images/design2.png);
+    background-size: cover;
+    background-position: center;
+    /* transform: rotateZ(-20deg) translate(-120px, -30px); */
+    
+}
+.card3{
+    background-image: url(images/design3.png);
+    background-size: cover;
+    background-position: center;
+    
+}
+.bag{
+    width: 100%;
+    height: 100%;
+    background-image: url(images/oval.png);
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+.order{
+    height: 100vh;
+    background: #000000;  /* fallback for old browsers */ 
+    animation: background-pan 6s linear infinite;
+    background: linear-gradient(
+      to right,
+      var(--purple),
+      var(--violet),
+      var(--pink),
+      var(--purple)
+    );
+    background-size: 200%;
+
+}
+.blur{
+    width:100%;
+    background-color: rgba(255, 255, 255, 0.171);
+    height: 100%;
+    backdrop-filter: blur(200px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.blur h1{
+    font-size: 5rem;
+    color: white;
+}
+
+.wear{
+  height: 100vh;
+  
+
+}
+.lastupper{
+  height: 80%;
+  width: 100%;
+ 
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+}
+.backall{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(to left,#000000, #434343, #000000);  
+  background: linear-gradient(to left,#000000, #434343, #000000); 
+  z-index: -1;
+  
+}
+.ba{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  z-index: -2;
+  
+}
+.lastdown{
+  height: 20%;
+  width:100%;
+}
+.wearpic{
+  height: 85%;
+  max-width: 30rem;
+  min-width: 20rem;
+  background-image: url(images/wear.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+}
+h3{
+  margin-top:1rem;
+  font-size: 4rem;
+  color: white;
+  font-weight: lighter;
+}
+
+.upl{
+  height: 50%;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: black 1px solid;
+}
+.downl{
+  position: relative;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.downl p{
+  font-size: 12px;
+}
+
+.copyright{
+  position: absolute;
+  bottom: 3px;
+  left:12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.links a img{
+  height: 38px;
+  width: 38px;
+  margin: 0 10px 0 10px;
+  transition: all ease-in-out 0.2s;
+}
+.links a img:hover{
+  transform: scale(110%);
+}
+svg{
+  width: 20px;
+  height: 20px;
+}
+
+
+
+.about{
+  position: absolute;
+  height: calc(100vh - 6rem);
+  background-color: rgba(232, 235, 235, 0.377);
+  width: 100%;
+  bottom: 0px;
+  z-index: 2;
+  transition: .5s all ease-in;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 15rem 0 15rem;
+  opacity: 0;
+  
+}
+
+.inspect{
+  backdrop-filter: blur(15px);
+  opacity: 1;
+}
+
+.arrow{
+  transform: rotate(180deg);
+}
+.ikon{
+  display: none;
+}
+.icon:hover{
+  cursor: pointer;
+  
+}
+
+.about p{
+  margin-top:4rem ;
+}
+@media only screen and (max-device-width: 490px){
+
+.find h1{
+  text-align: center;
+}
+.text{
+  height:15rem;
+}
+.tee{
+  height: calc(100vh - 21rem);
+}
+.about{
+  padding: 4rem;
+  text-align: left;
+}
+
+.design{
+  flex-direction: column-reverse;
+  
+ 
+  padding: 0;
+}
+.designtext{
+  display: flex;
+  text-align: center;
+  width: 100%;
+  height: 50%;
+  align-items: flex-start;
+}
+.designtext h2{
+  padding-left: 0;
+  margin-top: 2rem;
+}
+.cards{
+  width: 100%;
+  height: 50%;
+  
+}
+.card{
+  width: 11rem;
+  height: 15rem;
+}
+.order{
+  text-align: center;
+}
+h3{
+  font-size: 3rem;
+
+}
+.lastupper{
+  text-align: center;
+  height: 75%;
+}
+.lastdown{
+  height: 25%;
+}
+.copyright{
+  position: static;
+  margin-top: .5rem;
+  
+}
+.downl{
+  flex-direction: column-reverse;
+
+}
+
+
+}
